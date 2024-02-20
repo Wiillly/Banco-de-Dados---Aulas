@@ -1,5 +1,4 @@
 /* criar uma tabela /*
-
 CREATE TABLE PRIMEIRA_TABELA(
     codigo number NOT NULL,
     nome varchar(150) NOT NULL,
@@ -8,10 +7,16 @@ CREATE TABLE PRIMEIRA_TABELA(
     cep number NOT NULL);
 
 /* rodar a tabela /*
-
 SELECT * FROM all_tab_columns WHERE table_name = 'PRIMEIRA_TABELA'
 
 /* fazer uma modificação /*
-
 ALTER TABLE PRIMEIRA_TABELA
 MODIFY (cep number(8));
+
+/* Adicionar uma coluna na tabela /*
+ALTER TABLE PRIMEIRA_TABELA
+ADD (bairro varchar(50));
+
+/* Alterar o nome da coluna /*
+ALTER TABLE PRIMEIRA_TABELA
+RENAME COLUMN codigo To identificacao
